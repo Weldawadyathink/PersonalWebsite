@@ -1,5 +1,6 @@
 import { NavBar } from "@/components/NavBar";
 import { Heading } from "@/components/General";
+import { Separator } from "@/components/ui/separator";
 
 export default function AudiobookCovers() {
   return (
@@ -12,6 +13,7 @@ export default function AudiobookCovers() {
             AudiobookCovers.com
           </a>
         </Heading>
+        <Separator className="my-6" />
       </div>
     </>
   );
