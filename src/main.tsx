@@ -1,10 +1,31 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+function lazyLoadComponent(route: string) {
+  const LazyComponent = lazy(() => import(`./routes/${route}.tsx`));
+
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LazyComponent />
+    </Suspense>
+  );
+}
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: lazyLoadComponent("index"),
+  },
+  {
+    path: "test",
+    element: <span>Testing</span>,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
