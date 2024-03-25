@@ -19,8 +19,12 @@ const router = createBrowserRouter([
     element: lazyLoadComponent("index"),
   },
   {
-    path: "test",
-    element: <span>Testing</span>,
+    path: "about",
+    element: lazyLoadComponent("about"),
+  },
+  {
+    path: "audiobookcovers",
+    element: lazyLoadComponent("audiobookcovers"),
   },
 ]);
 
