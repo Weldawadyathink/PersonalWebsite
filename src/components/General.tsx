@@ -38,8 +38,21 @@ interface PProps extends HTMLAttributes<HTMLParagraphElement> {
 
 export function P({ children, className, ...otherProps }: PProps) {
   return (
-    <p className={cn("text-base", className)} {...otherProps}>
+    <p className={cn("text-base my-2", className)} {...otherProps}>
       {children}
     </p>
+  );
+}
+
+interface AProps extends HTMLAttributes<HTMLAnchorElement> {
+  className?: string;
+  href?: string;
+}
+
+export function A({ children, className, ...otherProps }: AProps) {
+  return (
+    <a className={cn("text-blue-500", className)} {...otherProps}>
+      {children}
+    </a>
   );
 }
