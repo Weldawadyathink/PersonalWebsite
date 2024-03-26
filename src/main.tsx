@@ -26,6 +26,10 @@ const router = createBrowserRouter([
     path: "audiobookcovers",
     element: lazyLoadComponent("audiobookcovers"),
   },
+  {
+    path: "taskrabbit",
+    element: lazyLoadComponent("taskrabbit"),
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

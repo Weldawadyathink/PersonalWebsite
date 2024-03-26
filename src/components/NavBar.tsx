@@ -18,6 +18,12 @@ const projects: { title: string; href: string; description: string }[] = [
     description:
       "A website to distribute and search for user generated cover artwork.",
   },
+  {
+    title: "TaskRabbit for Commerce7",
+    href: "/taskrabbit",
+    description:
+      "Powerful query and notification system to enhance Commerce7 winery POS software.",
+  },
 ];
 
 const ListItem = React.forwardRef<
@@ -50,7 +56,7 @@ ListItem.displayName = "ListItem";
 export function NavBar() {
   return (
     <header className="max-w-2xl mx-auto text-center mb-8">
-      <h1 className="text-3xl font-bold my-2">Spenser David Bushey</h1>
+      <h1 className="text-3xl font-bold my-2">Spenser Bushey</h1>
       <a href="mailto:spenser@spenserbushey.com">spenser@spenserbushey.com</a>
       <NavigationMenu className="mx-auto">
         <NavigationMenuList>
